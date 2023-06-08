@@ -48,4 +48,5 @@ def main(unit_index): # for testing purposes we will only do the first unit
             print('\n')
             print('\n')
 
-main(3)
+if __name__ == "__main__":
+    main(3)
