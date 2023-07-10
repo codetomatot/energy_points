@@ -11,13 +11,13 @@ parser.add_argument('-i', '--unit_index')
 parser.add_argument('-v', '--video_index')
 args = parser.parse_args()
 
-fp = webdriver.FirefoxProfile("/home/darkmatter/.mozilla/firefox/def1")
+fp = webdriver.FirefoxProfile("profile_directory")
 fp.set_preference("dom.webdriver.enabled", False)
 fp.set_preference("useAutomationExtension", False)
 fp.update_preferences()
 dc = DesiredCapabilities.FIREFOX
 
-driver = webdriver.Firefox(executable_path=Path("/home/darkmatter/geckodriver"), firefox_profile=fp, desired_capabilities=dc)
+driver = webdriver.Firefox(executable_path=Path("geckodriver_directory"), firefox_profile=fp, desired_capabilities=dc)
 driver.get("https://www.khanacademy.org/math/algebra")
 
 time.sleep(4)
